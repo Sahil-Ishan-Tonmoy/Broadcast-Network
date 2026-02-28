@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_broadcast">
+
+    <fragment
+        android:id="@+id/nav_broadcast"
+        android:name="com.example.assignment02.BroadcastOptionFragment"
+        android:label="Broadcast Receiver"
+        tools:layout="@layout/fragment_broadcast_option">
+        <action
+            android:id="@+id/action_nav_broadcast_to_broadcastInputFragment"
+            app:destination="@id/nav_broadcast_input" />
+        <action
+            android:id="@+id/action_nav_broadcast_to_broadcastBatteryFragment"
+            app:destination="@id/nav_broadcast_battery" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_broadcast_input"
+        android:name="com.example.assignment02.BroadcastInputFragment"
+        android:label="Input for Custom Broadcast"
+        tools:layout="@layout/fragment_broadcast_input">
+        <action
+            android:id="@+id/action_broadcastInputFragment_to_broadcastCustomReceiverFragment"
+            app:destination="@id/nav_broadcast_custom_receiver" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_broadcast_custom_receiver"
+        android:name="com.example.assignment02.BroadcastCustomReceiverFragment"
+        android:label="Custom Broadcast Receiver"
+        tools:layout="@layout/fragment_broadcast_custom_receiver">
+        <argument
+            android:name="message"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_broadcast_battery"
+        android:name="com.example.assignment02.BroadcastBatteryFragment"
+        android:label="Battery Notification Receiver"
+        tools:layout="@layout/fragment_broadcast_battery" />
+
+    <fragment
+        android:id="@+id/nav_image_scale"
+        android:name="com.example.assignment02.ImageScaleFragment"
+        android:label="Image Scale"
+        tools:layout="@layout/fragment_image_scale" />
+
+    <fragment
+        android:id="@+id/nav_video"
+        android:name="com.example.assignment02.VideoFragment"
+        android:label="Video"
+        tools:layout="@layout/fragment_video" />
+
+    <fragment
+        android:id="@+id/nav_audio"
+        android:name="com.example.assignment02.AudioFragment"
+        android:label="Audio"
+        tools:layout="@layout/fragment_audio" />
+</navigation>
