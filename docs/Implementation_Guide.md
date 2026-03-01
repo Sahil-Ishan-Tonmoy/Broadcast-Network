@@ -9,7 +9,7 @@ This document outlines the code changes, implementation details, and explanation
 The assignment was implemented as a **Single-Activity, Multi-Fragment Android application** using Kotlin. 
 Instead of launching separate Activities for every view, it relies on Jetpack's **Navigation component**:
 - **`MainActivity.kt`**: Serves as the host container. It initializes the `NavHostFragment` and sets up the Drawer Layout (`navigation view`) using `AppBarConfiguration`.
-- **Navigation Graph (`nav_graph.xml`)**: Manages the routing between different destinations (Audio, Video, Image Scaling, Broadcast options).
+- **Navigation Graph (`mobile_navigation.xml`)**: Manages the routing between different destinations (Audio, Video, Image Scaling, Broadcast options).
 - **ViewBinding**: Adopted across all fragments and activities to replace `findViewById`, making view references safer and null-aware.
 
 ---
